@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT Epipla_Diakosmisi_AE (stores_list,
+product_categories,
+room_classification,
+special_classification,
+contact_details,
+store_hours,
+Services?,
+product_list)>
+<!ATTLIST Epipla_Diakosmisi_AE number_of_products CDATA #REQUIRED Year_opened CDATA #REQUIRED>
+
+<!ELEMENT stores_list (store+)>
+
+<!ELEMENT store EMPTY>
+<!ATTLIST store strid ID #REQUIRED name CDATA #REQUIRED>
+
+<!ELEMENT product_categories (product_type+)>
+
+<!ELEMENT product_type (#PCDATA)>
+<!ATTLIST product_type prod_class_id ID #REQUIRED>
+
+<!ELEMENT room_classification (room_class+)>
+
+<!ELEMENT room_class (#PCDATA)>
+<!ATTLIST room_class class_id ID #REQUIRED>
+
+<!ELEMENT special_classification (special_classes)>
