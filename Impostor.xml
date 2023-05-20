@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE customerList [
+<!ELEMENT customerList (company|person)*>
+
+<!ELEMENT company (company_info, package_offer+)>
+<!ELEMENT company_info (name, AFM_number_comp, company_DOU, company_address)>
+<!ATTLIST company
+          CompCodeNo CDATA #REQUIRED>
+
+<!ELEMENT person (person_info, package_offer+)>
+<!ELEMENT person_info (first_name, middle_name?, last_name, AFM_number_person, person_DOU, private_address)>
+<!ATTLIST person
+          PersonCodeNo CDATA #REQUIRED>
+<!ELEMENT package_offer (giving+, tel_numb*, startPrice, (finalPrice|in_discount), contract_start_date, contract_end_date)>
+<!ATTLIST package_offer
+          package_category (B_START|B_LITE|P_LITE|P_START|B_all|P_all|B_smart|P_smart) #REQUIRED
+          contract_number CDATA #REQUIRED>
+<!ELEMENT giving (#PCDATA)>
+<!ELEMENT tel_numb (#PCDATA)>
+<!ELEMENT startPrice EMPTY>
+<!ATTLIST startPrice
+          unitS CDATA "euro"
+          forperiodS CDATA "month">
+<!ELEMENT finalPrice EMPTY>
+<!ATTLIST finalPrice
+          unitF CDATA "euro"
+          forperiodF CDATA "month">
+<!ELEMENT in_discount (discount_rate, amount_after_discount)>
+<!ELEMENT discount_rate (#PCDATA)>
+<!ELEMENT amount_after_discount EMPTY>
+<!ATTLIST amount_after_discount
+          unit CDATA "euro"
+          forperiod CDATA "month">
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT AFM_number_comp (#PCDATA)>
+<!ELEMENT company_DOU (#PCDATA)>
+<!ELEMENT company_address (#PCDATA)>
+
+<!ELEMENT first_name (#PCDATA)>
+<!ELEMENT middle_name (#PCDATA)>
+<!ELEMENT last_name (#PCDATA)>
+<!ELEMENT AFM_number_person (#PCDATA)>
+<!ELEMENT person_DOU (#PCDATA)>
+<!ELEMENT private_address (#PCDATA)>
+
+<!ELEMENT contract_start_date (#PCDATA)>
+<!ELEMENT contract_end_date (#PCDATA)>
+]>
+
+<customerList>
+  <company CompCodeNo="C001">
+    <company_info>
+      <name>PTSAG100</name>
+      <AFM_number_comp>123456789012345</AFM_number_comp>
+      <company_DOU>987654321098765</company_DOU>
+      <company_address>456 Karaoli&amp;Dimitriou, Peireas, Ellada</company_address>
+    </company_info>
+    <package_offer package_category="B_START" contract_number="P001">
+      <giving>Unlimited calls and texts</giving>
+      <giving>7GB data</giving>
+      <startPrice unitS="euro" forperiodS="month" />
+      <finalPrice unitF="euro" forperiodF="month" />
+      <contract_start_date>-27-03-2023</contract_start_date>
+      <contract_end_date>-04-03-2024</contract_end_date>
+    </package_offer>
+  </company>
+  <person PersonCodeNo="P001">
+    <person_info>
+      <first_name>Mark</first_name>
+      <middle_name>Jesus</middle_name>
+      <last_name>Klonis</last_name>
+      <AFM_number_person>987654321987654</AFM_number_person>
+      <person_DOU>123456789123456</person_DOU>
+      <private_address>457 Al Tsadiri, Agios Dimitrios, Ellada</private_address>
+    </person_info>
+    <package_offer package_category="P_LITE" contract_number="P002">
+      <giving>500 minutes talk time</giving>
+      <giving>5GB data</giving>
+      <tel_numb>1234567890</tel_numb>
+      <startPrice unitS="euro" forperiodS="month" />
+      <finalPrice unitF="euro" forperiodF="month" />
+      <contract_start_date>-07-04-2023</contract_start_date>
+      <contract_end_date>-03-12-2024</contract_end_date>
+    </package_offer>
+  </person>
+</customerList>

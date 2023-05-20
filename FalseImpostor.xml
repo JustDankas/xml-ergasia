@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE customerList [
+<!ELEMENT customerList (company|person)*>
+
+<!ELEMENT company (company_info, package_offer+)>
+<!ELEMENT company_info (name, AFM_number_comp, company_DOU, company_address)>
+<!ATTLIST company
+          CompCodeNo CDATA #REQUIRED>
+
+<!ELEMENT person (person_info, package_offer+)>
+<!ELEMENT person_info (first_name, middle_name?, last_name, AFM_number_person, person_DOU, private_address)>
+<!ATTLIST person
+          PersonCodeNo CDATA #REQUIRED>
+<!ELEMENT package_offer (giving+, tel_numb*, startPrice, (finalPrice|in_discount), contract_start_date, contract_end_date)>
+<!ATTLIST package_offer
+          package_category (B_START|B_LITE|P_LITE|P_START|B_all|P_all|B_smart|P_smart) #REQUIRED
+          contract_number CDATA #REQUIRED>
+<!ELEMENT giving (#PCDATA)>
+<!ELEMENT tel_numb (#PCDATA)>
+<!ELEMENT startPrice EMPTY>
+<!ATTLIST startPrice
+          unitS CDATA "euro"
+          forperiodS CDATA "month">
+<!ELEMENT finalPrice EMPTY>
+<!ATTLIST finalPrice
+          unitF CDATA "euro"
+          forperiodF CDATA "month">
+<!ELEMENT in_discount (discount_rate, amount_after_discount)>
+<!ELEMENT discount_rate (#PCDATA)>
+<!ELEMENT amount_after_discount EMPTY>
+<!ATTLIST amount_after_discount
+          unit CDATA "euro"
+          forperiod CDATA "month">
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT AFM_number_comp (#PCDATA)>
+<!ELEMENT company_DOU (#PCDATA)>
+<!ELEMENT company_address (#PCDATA)>
+
+<!ELEMENT first_name (#PCDATA)>
+<!ELEMENT middle_name (#PCDATA)>
+<!ELEMENT last_name (#PCDATA)>
+<!ELEMENT AFM_number_person (#PCDATA)>
+<!ELEMENT person_DOU (#PCDATA)>
+<!ELEMENT private_address (#PCDATA)>
+
+<!ELEMENT contract_start_date (#PCDATA)>
+<!ELEMENT contract_end_date (#PCDATA)>
+]>
+
+<customerList>
+  <person>    Λείπει το Atribute PersonCodeNo
+    <person_info>
+      <last_name>Dorothy</last_name> To last_name θα έπρεπε να είναι κάτω από το first_name
+      <first_name>Junior <AFM_number_person></first_name> Προσπαθεί να γίνει εμφώλευση του AFM_number_person στο first_name, η οποία είναι και λάθος
+      1234567890</AFM_number_person>
+      <person_DOU>4564632967962</person_DOU>
+      <private_address>122 thugShakers Street</private_address>
+    </person_info>
+    <package_offer package_category="INVALID_CATEGORY" contract_number="123"> έχει άκυρη τιμη το attribute package_category
+      <giving>Free installation</giving>
+      <tel_numb>555-1234</tel_numb>
+      <startPrice unitS="euro" forperiodS="month" />
+      <finalPrice unitF="euro" forperiodF="month" />
+      <extra_element>extraa info<extra_element> Eισαγωγή ενός extra_element που δεν θα έπρεπε να υπάρχει
+      <contract_start_date>21-08-2021</contract_start_date>
+      <contract_end_date>25-05-3004</contract_end_date>
+    </package_offer>
+  </person>
+  <company> Λείπει το attribute compCodeNo και το company info element
+    <!-- Missing company_info element -->
+    <package_offer package_category="P_LITE" contract_number="456"> Δεν έχει closing tag το element package_offer
+      </giving>Free upgrade             To giving είναι κενό επειδή έχει closing tag πριν το content του
+      <tel_numb>555&5678</tel_numb> έχει τον τελεστή & μέσα σε pcdata
+      <startPrice unitS="euro" forperiodS="month" />
+      <finalPrice unitF="euro" forperiodF="month" />
+      <contract_start_date>01-01-2022</contract_start_date>
+      <contract_end_date>09-09-2023</contract_end_date>
+    
+  </company>
+</customerList day="40"> Εισαγωγή attribute στο κλείσιμο της customerlist η οποία δεν προβλέπεται από το dtd
