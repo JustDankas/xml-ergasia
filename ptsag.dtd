@@ -49,8 +49,8 @@ product_list)>
 <!ELEMENT shop_store (address,tel*,email*)>
 <!ELEMENT store_hours (Day+)>
 <!ELEMENT Day (#PCDATA | Timing)*>
+<!ATTLIST Day day_id ID #REQUIRED>
 <!ELEMENT Timing (#PCDATA)>
-<!ATTLIST Timing day_id ID #REQUIRED>
 <!ELEMENT Services (shipping_Charges,Assembly_Charges,Interior_Design_Charges?)>
 <!ELEMENT shipping_Charges ((charges_Ath_Th,charges_other_places) |(charges_other_places,charges_Ath_Th) )>
 <!ELEMENT charges_Ath_Th (shipValue+)>

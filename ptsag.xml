@@ -128,38 +128,38 @@
     </contact_details>
 
     <store_hours>
-        <Day>
+        <Day day_id="id-1">
             Δευτέρα
-            <Timing day_id="day_id-1">9:00 am – 15:00 pm</Timing>
+            <Timing >9:00 am – 15:00 pm</Timing>
         </Day>
-        <Day>
+        <Day day_id="id-2">
             Τρίτη
-            <Timing day_id="day_id-2"> 9:00 am – 15:00 pm και 17:00 pm – 21:00 pm</Timing>
+            <Timing > 9:00 am – 15:00 pm και 17:00 pm – 21:00 pm</Timing>
         </Day>
 
-        <Day>
+        <Day day_id="id-3">
             Τετάρτη
-            <Timing day_id="day_id-3">9:00 am – 15:00 pm</Timing>
+            <Timing >9:00 am – 15:00 pm</Timing>
         </Day>
 
-        <Day>
+        <Day day_id="id-4">
             Πέμπτη
-            <Timing day_id="day_id-4">9:00 am – 15:00 pm και 17:00 pm – 21:00 pm</Timing>
+            <Timing >9:00 am – 15:00 pm και 17:00 pm – 21:00 pm</Timing>
         </Day>
         
-        <Day>
+        <Day day_id="id-5">
             Παρακσευή
-            <Timing day_id="day_id-5">9:00 am –21:00 pm</Timing>
+            <Timing >9:00 am –21:00 pm</Timing>
         </Day>
 
-        <Day>
+        <Day day_id="id-6">
             Σάββατο
-            <Timing day_id="day_id-6">9:00 am –18:00 pm</Timing>
+            <Timing >9:00 am –18:00 pm</Timing>
         </Day>
 
-        <Day>
+        <Day day_id="id-7">
             Κυριακή
-            <Timing day_id="day_id-7">Κλειστά</Timing>
+            <Timing >Κλειστά</Timing>
         </Day>
     </store_hours>
 
