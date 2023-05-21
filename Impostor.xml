@@ -1,51 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE customerList [
-<!ELEMENT customerList (company|person)*>
-
-<!ELEMENT company (company_info, package_offer+)>
-<!ELEMENT company_info (name, AFM_number_comp, company_DOU, company_address)>
-<!ATTLIST company
-          CompCodeNo CDATA #REQUIRED>
-
-<!ELEMENT person (person_info, package_offer+)>
-<!ELEMENT person_info (first_name, middle_name?, last_name, AFM_number_person, person_DOU, private_address)>
-<!ATTLIST person
-          PersonCodeNo CDATA #REQUIRED>
-<!ELEMENT package_offer (giving+, tel_numb*, startPrice, (finalPrice|in_discount), contract_start_date, contract_end_date)>
-<!ATTLIST package_offer
-          package_category (B_START|B_LITE|P_LITE|P_START|B_all|P_all|B_smart|P_smart) #REQUIRED
-          contract_number CDATA #REQUIRED>
-<!ELEMENT giving (#PCDATA)>
-<!ELEMENT tel_numb (#PCDATA)>
-<!ELEMENT startPrice EMPTY>
-<!ATTLIST startPrice
-          unitS CDATA "euro"
-          forperiodS CDATA "month">
-<!ELEMENT finalPrice EMPTY>
-<!ATTLIST finalPrice
-          unitF CDATA "euro"
-          forperiodF CDATA "month">
-<!ELEMENT in_discount (discount_rate, amount_after_discount)>
-<!ELEMENT discount_rate (#PCDATA)>
-<!ELEMENT amount_after_discount EMPTY>
-<!ATTLIST amount_after_discount
-          unit CDATA "euro"
-          forperiod CDATA "month">
-<!ELEMENT name (#PCDATA)>
-<!ELEMENT AFM_number_comp (#PCDATA)>
-<!ELEMENT company_DOU (#PCDATA)>
-<!ELEMENT company_address (#PCDATA)>
-
-<!ELEMENT first_name (#PCDATA)>
-<!ELEMENT middle_name (#PCDATA)>
-<!ELEMENT last_name (#PCDATA)>
-<!ELEMENT AFM_number_person (#PCDATA)>
-<!ELEMENT person_DOU (#PCDATA)>
-<!ELEMENT private_address (#PCDATA)>
-
-<!ELEMENT contract_start_date (#PCDATA)>
-<!ELEMENT contract_end_date (#PCDATA)>
-]>
+<!DOCTYPE customerList SYSTEM "./Impostor.dtd">
 
 <customerList>
   <company CompCodeNo="C001">
