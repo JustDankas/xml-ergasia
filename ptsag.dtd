@@ -34,8 +34,6 @@
 <!ELEMENT product_list (product*)>
 <!ATTLIST product product_id ID #REQUIRED>
 <!ATTLIST product prod_class_id IDREFS #REQUIRED>
-<!ATTLIST product product_type IDREFS #REQUIRED>
-<!ATTLIST product room_class IDREFS #REQUIRED>
 <!ELEMENT product (product_name,product_code,store_availability,product_descr,product_characteristics,start_value,Final_value)>
 <!ELEMENT product_name (#PCDATA)>
 <!ELEMENT product_code (#PCDATA)>
