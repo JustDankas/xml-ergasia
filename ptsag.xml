@@ -5,8 +5,8 @@
 <Epipla_Diakosmisi_AE number_of_products="over of 2000" Year_opened="2004">
     <name>ΗΟΜΕ23</name>
     <stores_list>
-        <store strid="strid-1" name="Αθήνα(κολωνάκι)" />  
-        <store strid="strid-2" name="Αθήνα(Αεροδρόμιο)" />  
+        <store strid="strid-1" name="Αθήνα (Κολωνάκι)" />  
+        <store strid="strid-2" name="Αθήνα (Αεροδρόμιο)" />  
         <store strid="strid-3" name="Θεσσαλονίκη" />  
         <store strid="strid-4" name="Ιωάννινα" />  
         <store strid="strid-5" name="Λάρισσα" />  
@@ -128,36 +128,36 @@
     </contact_details>
 
     <store_hours>
-        <Day day_id="id-1">
+        <Day day_id="day_id-1">
             Δευτέρα
             <Timing >9:00 am – 15:00 pm</Timing>
         </Day>
-        <Day day_id="id-2">
+        <Day day_id="day_id-2">
             Τρίτη
             <Timing > 9:00 am – 15:00 pm και 17:00 pm – 21:00 pm</Timing>
         </Day>
 
-        <Day day_id="id-3">
+        <Day day_id="day_id-3">
             Τετάρτη
             <Timing >9:00 am – 15:00 pm</Timing>
         </Day>
 
-        <Day day_id="id-4">
+        <Day day_id="day_id-4">
             Πέμπτη
             <Timing >9:00 am – 15:00 pm και 17:00 pm – 21:00 pm</Timing>
         </Day>
         
-        <Day day_id="id-5">
+        <Day day_id="day_id-5">
             Παρακσευή
             <Timing >9:00 am –21:00 pm</Timing>
         </Day>
 
-        <Day day_id="id-6">
+        <Day day_id="day_id-6">
             Σάββατο
             <Timing >9:00 am –18:00 pm</Timing>
         </Day>
 
-        <Day day_id="id-7">
+        <Day day_id="day_id-7">
             Κυριακή
             <Timing >Κλειστά</Timing>
         </Day>
