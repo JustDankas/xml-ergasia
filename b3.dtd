@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?> 
 
-<!ELEMENT Epipla_Diakosmisi_AE (Epipla_Diakosmisi_AE_name,
+<!ELEMENT Epipla_Diakosmisi_AE (
+name,
 stores_list,
 product_categories,
 room_classification,
@@ -11,6 +12,8 @@ Services?,
 product_list)>
 <!ELEMENT Epipla_Diakosmisi_AE_name (#PCDATA)>
 <!ATTLIST Epipla_Diakosmisi_AE number_of_products CDATA #REQUIRED Year_opened CDATA #REQUIRED>
+
+<!ELEMENT name (#PCDATA)>
 
 <!ELEMENT stores_list (store+)>
 
@@ -45,14 +48,16 @@ product_list)>
 <!ELEMENT email (#PCDATA)>
 <!ELEMENT shop_store (address,tel*,email*)>
 <!ELEMENT store_hours (Day+)>
-<!ELEMENT Day (ANY,Timing*)>
-<!ATTLIST Timing day_id ID #REQUIRED>
+<!ELEMENT Day (#PCDATA | Timing)*>
+<!ATTLIST Day day_id ID #REQUIRED>
+<!ELEMENT Timing (#PCDATA)>
 <!ELEMENT Services (shipping_Charges,Assembly_Charges,Interior_Design_Charges?)>
 <!ELEMENT shipping_Charges ((charges_Ath_Th,charges_other_places) |(charges_other_places,charges_Ath_Th) )>
 <!ELEMENT charges_Ath_Th (shipValue+)>
 <!ELEMENT charges_other_places (shipValue+)>
 <!ATTLIST charges_Ath_Th shiping_until CDATA #REQUIRED>
 <!ATTLIST charges_other_places shiping_until CDATA #REQUIRED>
+<!ELEMENT shipValue (#PCDATA)>
 <!ATTLIST shipValue ship_weight_category CDATA #REQUIRED>
 <!ATTLIST shipValue shpunit CDATA #FIXED "euro">
 <!ELEMENT Assembly_Charges (assValue*)>
@@ -63,18 +68,17 @@ product_list)>
 <!ELEMENT DesValue (#PCDATA)>
 <!ATTLIST DesValue dessunit CDATA #FIXED "euro">
 <!ATTLIST DesValue Des_category CDATA #REQUIRED>
-<!ATTLIST DesValue forevery CDATA "δωμάτιο">
+<!ATTLIST DesValue forevery CDATA "room">
 
 <!ELEMENT product_list (product*)>
+<!ELEMENT product (product-identification,store_availability,product_descr,product_characteristics,start_value,Final_value)>
 <!ATTLIST product product_id ID #REQUIRED>
 <!ATTLIST product prod_class_id IDREFS #REQUIRED>
-<!ELEMENT product (product_name,product_code,store_availability,product_descr,product_characteristics,start_value,Final_value)>
-<!ELEMENT product_name (#PCDATA)>
-<!ELEMENT product_code (#PCDATA)>
+<!ELEMENT product-identification EMPTY>
+<!ATTLIST product-identification product_code ID #REQUIRED product_name CDATA #IMPLIED>
 
 <!ELEMENT store_availability (quantity*)>
 <!ELEMENT product_descr (#PCDATA)>
-<!ELEMENT product_characteristics (start_value,Final_value)>
 <!ELEMENT quantity (#PCDATA)>
 <!ATTLIST quantity store_id IDREF #REQUIRED>
 <!ELEMENT product_characteristics (manufacturer_country?,weight,material*,included*,not_included*,color*,(size | Dimensions+),certified?)>
@@ -92,36 +96,36 @@ product_list)>
 <!ELEMENT certified EMPTY>
 <!ATTLIST certified certificate CDATA #REQUIRED>
 
-<!ELEMENT color (default_color,also_available_color*)>
+<!ELEMENT color (#PCDATA | also_available_color)*>
 <!ELEMENT also_available_color (#PCDATA)>
 <!ELEMENT default_color (#PCDATA)>
 <!ATTLIST color in CDATA #IMPLIED>
 <!ATTLIST also_available_color also_color CDATA #REQUIRED>
 
-<!ELEMENT Dimensions (height?,length?,width?,depth?)>
+<!ELEMENT Dimensions (height?,length?,width,depth*)>
 <!ELEMENT height (#PCDATA)>
 <!ELEMENT length (#PCDATA)>
 <!ELEMENT width (#PCDATA)>
 <!ELEMENT depth (#PCDATA)>
 
+<!ATTLIST Dimensions assembled (yes | no) #IMPLIED>
 <!ATTLIST height unit_height (cm|m) "cm">
 <!ATTLIST length unit_length (cm|m) "cm">
 <!ATTLIST width unit_width (cm|m) "cm">
 <!ATTLIST depth unit_depth CDATA #FIXED "cm" for CDATA #IMPLIED>
 
-<!ELEMENT start_value (initial_value,offer_rate?)>
-<!ELEMENT initial_value (#PCDATA)>
+<!ELEMENT start_value (#PCDATA | offer_rate)*>
 <!ELEMENT offer_rate (#PCDATA)>
 
-<!ATTLIST initial_value valunit CDATA #IMPLIED 
+<!ATTLIST start_value valunit CDATA #IMPLIED 
 can_return (yes|no) #IMPLIED 
 can_reserved (yes|no) #IMPLIED
 option_of_assembly (yes|no) #IMPLIED
 is_assembled (yes|no) #IMPLIED
 >
 
-<!ELEMENT Final_value (fixed_final_value,accept_doses?)>
-<!ELEMENT fixed_final_value (#PCDATA)>
+<!ELEMENT Final_value (#PCDATA | accept_doses)*>
+<!ATTLIST Final_value valunit CDATA #IMPLIED>
 <!ELEMENT accept_doses (num_doses,
 ammount_doses,
 With_credit_card?,
