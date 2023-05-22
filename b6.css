@@ -1,0 +1,176 @@
+:root {
+  --primary: #ab092f;
+  --secondary: #002d51;
+  --font-sm: 12px;
+  --font-md: 24px;
+  --font-lg: 36px;
+  --font-xl: 48px;
+  --lg: 1200px;
+  --md: 900px;
+  --sm: 560px;
+  --xs: 320px;
+}
+Epipla_Diakosmisi_AE {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 25px 0;
+  font-size: var(--font-sm);
+}
+name {
+  color: var(--primary);
+  font-size: var(--font-md);
+  font-weight: bold;
+}
+
+stores_list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+}
+store::after {
+  content: attr(name);
+}
+
+product_categories {
+  margin: 25px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media screen and (max-width: 900px) {
+  product_categories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 560px) {
+  product_categories {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+product_type::before {
+  content: attr(prod_class_id);
+  margin-right: 10px;
+}
+product_type {
+  display: list-item;
+}
+product_type:hover {
+  color: var(--secondary);
+  /* font-weight: bold; */
+  background: var(--secondary);
+  color: aliceblue;
+}
+room_classification {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+room_class {
+  width: 120px;
+  text-align: center;
+  padding: 12px;
+  margin: 5px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+  transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
+}
+
+room_class:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.75);
+}
+/* contact_details {
+  display: grid;
+  grid-template-columns: 100% repeat(2, 1fr);
+} */
+Headquarters::before {
+  content: "Headquarters: ";
+  font-weight: bold;
+  font-size: var(--font-md);
+}
+Headquarters {
+  display: flex;
+  flex-direction: column;
+  margin: 12px;
+}
+stores {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+shop_store::before {
+  content: "Store";
+  color: var(--secondary);
+}
+shop_store {
+  display: flex;
+  flex-direction: column;
+  margin: 12px;
+}
+address::before {
+  content: "Address:";
+  font-weight: bold;
+  color: var(--primary);
+}
+tel::before {
+  content: "Tel:";
+  font-weight: bold;
+  color: var(--primary);
+}
+email::before {
+  content: "Email:";
+  font-weight: bold;
+  color: var(--primary);
+}
+store_hours::before {
+  content: "Ωραρια";
+  text-align: center;
+  display: table-caption;
+  font-weight: bold;
+  /* width: 100%; */
+}
+store_hours {
+  /* width: 100%; */
+  display: table;
+  /* flex-direction: row; */
+}
+Day {
+  display: table-cell;
+  /* flex-direction: column; */
+  border: 1px solid black;
+  padding: 5px;
+  margin: 5px;
+}
+Timing {
+  display: block;
+  width: 100%;
+}
+@media screen and (max-width: 560px) {
+  store_hours {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  Day {
+    display: block;
+    border: 1px solid black;
+    padding: 5px;
+    margin: 5px;
+  }
+  store_hours::before {
+    content: "Ωραρια:";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    /* width: 100%; */
+  }
+}
+@media screen and (max-width: 320px) {
+  store_hours {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
