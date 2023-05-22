@@ -9,7 +9,8 @@ special_classification,
 contact_details,
 store_hours,
 Services?,
-product_list)>
+product_list,
+gift_cards)>
 <!ATTLIST Epipla_Diakosmisi_AE number_of_products CDATA #REQUIRED Year_opened CDATA #REQUIRED>
 
 <!ELEMENT name (#PCDATA)>
@@ -70,7 +71,10 @@ product_list)>
 <!ATTLIST DesValue forevery CDATA "room">
 
 <!ELEMENT product_list (product*)>
-<!ELEMENT product (product-identification,store_availability,product_descr,product_characteristics,start_value,Final_value)>
+<!ELEMENT product (product-identification,store_availability,product_descr,
+product_characteristics,start_value,Final_value,
+new_release?,low_on_stock?,image,can_ship?,
+receive_from_store?,receive_only_from_store?,ratings)>
 <!ATTLIST product product_id ID #REQUIRED>
 <!ATTLIST product prod_class_id IDREFS #REQUIRED>
 <!ELEMENT product-identification EMPTY>
@@ -135,3 +139,26 @@ interest_free?)>
 <!ELEMENT ammount_doses (#PCDATA)>
 <!ELEMENT With_credit_card EMPTY>
 <!ELEMENT interest_free EMPTY>
+
+<!ELEMENT new_release EMPTY>
+<!ELEMENT low_on_stock EMPTY>
+<!ATTLIST low_on_stock stores IDREFS #REQUIRED>
+<!ELEMENT image (#PCDATA)>
+<!ATTLIST image type (png|jpg|webp) #REQUIRED>
+<!ELEMENT can_ship (yes|no)>
+<!ELEMENT receive_from_store EMPTY>
+<!ATTLIST receive_from_store stores IDREFS #REQUIRED>
+<!ELEMENT receive_only_from_store EMPTY>
+<!ATTLIST receive_only_from_store stores IDREFS #REQUIRED>
+
+<!ELEMENT ratings (rating*)>
+<!ELEMENT rating (username,stars,comment?)>
+<!ELEMENT username (#PCDATA)>
+<!ELEMENT stars (#PCDATA)>
+<!ELEMENT comment (#PCDATA)>
+
+<!ELEMENT gift_cards (giftcard*)>
+<!ELEMENT giftcard (#PCDATA)>
+<!ATTLIST giftcard id ID #REQUIRED>
+<!ATTLIST giftcard value CDATA #REQUIRED>
+<!ATTLIST giftcard currency CDATA #FIXED "euro">
