@@ -17,23 +17,36 @@ Epipla_Diakosmisi_AE {
   align-items: center;
   margin: 25px 0;
   font-size: var(--font-sm);
+  font-family: sans-serif;
 }
 name {
   color: var(--primary);
   font-size: var(--font-md);
   font-weight: bold;
+  padding-top: 10vh;
+  margin-bottom: 2rem;
+  text-decoration: underline;
 }
 
 stores_list {
   width: 100%;
+  height: 5vh;
   display: flex;
-  flex-direction: column;
-  margin-left: 50px;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  background-color: #ab092f;
+  left: 0;
+  top: 0;
+  flex-wrap: wrap;
 }
 store::after {
   content: attr(name);
+  color: white;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 15px;
 }
-
 product_categories {
   margin: 25px 0;
   display: grid;
@@ -55,6 +68,7 @@ product_type::before {
 }
 product_type {
   display: list-item;
+  font-size: large;
 }
 product_type:hover {
   color: var(--secondary);
@@ -88,27 +102,50 @@ room_class:hover {
   grid-template-columns: 100% repeat(2, 1fr);
 } */
 Headquarters::before {
-  content: "Headquarters: ";
+  width: 100%;
+  text-align: center;
+  content: "Headquarters";
   font-weight: bold;
   font-size: var(--font-md);
+  font-family: sans-serif;
+  color: #ab092f;
+  text-decoration: underline;
+  margin-bottom: 2rem;
+  margin-top: 5rem;
 }
 Headquarters {
   display: flex;
   flex-direction: column;
   margin: 12px;
+  text-align: center;
+  font-size: large;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+Headquarters::after {
+  content: "Shop Stores";
+  width: 100%;
+  margin-top: 5rem;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #ab092f;
+  font-family: sans-serif;
 }
 stores {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
-shop_store::before {
+/* shop_store::before {
   content: "Store";
   color: var(--secondary);
-}
+} */
 shop_store {
   display: flex;
   flex-direction: column;
   margin: 12px;
+  font-size: large;
 }
 address::before {
   content: "Address:";
@@ -126,16 +163,23 @@ email::before {
   color: var(--primary);
 }
 store_hours::before {
-  content: "Ωραρια";
+  content: "Ωράρια";
   text-align: center;
   display: table-caption;
   font-weight: bold;
-  /* width: 100%; */
+  width: 100%;
+  font-size: 24px;
+  color: #ab092f;
+  text-decoration: underline;
+  margin-top: 5rem;
+  margin-bottom: 1rem;
 }
 store_hours {
   /* width: 100%; */
   display: table;
+  text-align: center;
   /* flex-direction: row; */
+  font-size: medium;
 }
 Day {
   display: table-cell;
@@ -143,11 +187,151 @@ Day {
   border: 1px solid black;
   padding: 5px;
   margin: 5px;
+  font-weight: bold;
 }
 Timing {
   display: block;
   width: 100%;
+  font-weight: 100;
 }
+Services::before {
+  width: 100%;
+  content: "Services";
+  font-size: 24px;
+  font-weight: bold;
+  color: #ab092f;
+  text-decoration: underline;
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+}
+Services {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+charges_Ath_Th::before {
+  content: "For Athens:";
+  text-align: end;
+  font-weight: bold;
+  font-size: 16px;
+  margin-right: 1rem;
+  width: 10%;
+}
+charges_Ath_Th {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+shipping_Charges {
+  width: 100%;
+}
+charges_other_places::before {
+  content: "For other places:";
+  text-align: end;
+  font-weight: bold;
+  font-size: 16px;
+  margin-right: 1rem;
+  width: 10%;
+}
+
+charges_other_places {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+shipValue::before {
+  content: attr(ship_weight_category);
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+}
+shipValue {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  text-align: center;
+  padding: 1rem;
+  font-size: 16px;
+  border: 1px solid black;
+}
+assValue::before {
+  content: attr(ass_category);
+  font-weight: bold;
+}
+
+assValue {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  padding: 1rem;
+}
+Assembly_Charges {
+  display: flex;
+  font-size: 16px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+Assembly_Charges::before {
+  content: "Assembly Charges: ";
+  width: 10%;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: end;
+  margin-right: 1rem;
+}
+
+DesValue::before {
+  content: attr(Des_category);
+  font-weight: bold;
+}
+
+DesValue {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+Interior_Design_Charges {
+  display: flex;
+  font-size: 16px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+Interior_Design_Charges::before {
+  width: 10%;
+  content: "Interior Design Charges: ";
+  font-size: 16px;
+  font-weight: bold;
+  text-align: end;
+  margin-right: 1rem;
+}
+
+product_list::before {
+  content: "Products";
+  font-weight: bold;
+  font-size: 24px;
+  text-decoration: underline;
+  color: #ab092f;
+  text-align: center;
+}
+product_list {
+  display: flex;
+  flex-direction: column;
+}
+
 @media screen and (max-width: 560px) {
   store_hours {
     display: grid;
