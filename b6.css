@@ -326,12 +326,163 @@ product_list::before {
   text-decoration: underline;
   color: #ab092f;
   text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+  width: 100%;
 }
 product_list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+product {
+  border: 1px solid black;
+  padding: 1rem;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 25%;
+  box-sizing: border-box;
+}
+
+product::before {
+  content: attr(product_id);
+  font-weight: bold;
+  color: #ab092f;
+  margin-right: 1rem;
+  font-size: 24px;
+  /* content: attr(prod_class_id); */
+}
+product-identification::before {
+  content: "Product Code: ";
+  font-weight: bold;
+  color: #002d51;
+}
+product-identification::after {
+  content: attr(product_code);
+}
+store_availability::before {
+  content: "Store availability: ";
+  color: #002d51;
+  font-weight: bold;
+}
+quantity::after {
+  content: attr(store_id);
+  margin-left: 1rem;
+  font-weight: 100;
+}
+quantity {
+  font-weight: bold;
+  display: list-item;
+  margin-left: 2rem;
+}
+quantity::before {
+  content: " x";
+  font-weight: bold;
+}
+store_availability {
   display: flex;
   flex-direction: column;
 }
 
+product_descr::before {
+  content: "Product description: ";
+  color: #002d51;
+  font-weight: bold;
+}
+product_characteristics {
+  display: flex;
+  flex-direction: column;
+}
+manufacturer_country::before {
+  content: "Manufacturer: ";
+  color: #002d51;
+  font-weight: bold;
+}
+weight::before {
+  content: "Weight: ";
+  color: #002d51;
+  font-weight: bold;
+}
+
+weight::after {
+  content: attr(unit_weight);
+}
+material::before {
+  content: "Material: ";
+  color: #002d51;
+  font-weight: bold;
+}
+
+included::before {
+  content: "Included: ";
+  color: #002d51;
+  font-weight: bold;
+}
+
+not_included::before {
+  content: "Not included: ";
+  color: #002d51;
+  font-weight: bold;
+}
+
+color::before {
+  content: "Color: ";
+  color: #002d51;
+  font-weight: bold;
+}
+
+Dimensions::before {
+  content: "Dimensions: ";
+  color: #002d51;
+  font-weight: bold;
+}
+
+Dimensions {
+  display: flex;
+  flex-direction: column;
+}
+/* Dimensions::after {
+  content: attr(assembled);
+} */
+length {
+  display: flex;
+}
+length::before {
+  content: "length: ";
+  font-weight: bold;
+  display: list-item;
+  margin-left: 2rem;
+}
+width {
+  display: flex;
+}
+width::before {
+  content: "width: ";
+  font-weight: bold;
+  display: list-item;
+  margin-left: 2rem;
+}
+
+depth {
+  display: flex;
+}
+depth::before {
+  content: "depth: ";
+  font-weight: bold;
+  display: list-item;
+  margin-left: 2rem;
+}
+height {
+  display: flex;
+}
+height::before {
+  content: "height: ";
+  font-weight: bold;
+  display: list-item;
+  margin-left: 2rem;
+}
 @media screen and (max-width: 560px) {
   store_hours {
     display: grid;
