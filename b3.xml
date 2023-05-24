@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- <?xml-model href="b3.dtd" type="application/xml-dtd"?> -->
 <?xml-stylesheet href="b6.css" type="text/css"?>
-
+<!-- <?xml-stylesheet href="present1.xsl" type="text/xsl"?> -->
 
 <Epipla_Diakosmisi_AE number_of_products="over of 2000" Year_opened="2004" 
 xmlns="urn:Test.Namespace"
@@ -221,7 +220,7 @@ xsi:schemaLocation="urn:Test.Namespace b4.xsd">
             </product_characteristics>
             <start_value valunit="euro" can_return="no">
                     19.99
-                    <offer_rate>33%</offer_rate>
+                    <offer_rate>33</offer_rate>
                 </start_value>
                 <Final_value>13.50</Final_value>
         </product>
@@ -299,7 +298,7 @@ xsi:schemaLocation="urn:Test.Namespace b4.xsd">
             </product_characteristics>
             <start_value valunit="euro" can_reserved="yes" is_assembled="yes">
                 199.00
-                <offer_rate>20%</offer_rate>
+                <offer_rate>20</offer_rate>
             </start_value>
             <Final_value valunit="euro">159.20
             <accept_doses>
@@ -350,7 +349,7 @@ xsi:schemaLocation="urn:Test.Namespace b4.xsd">
             </product_characteristics>
             <start_value valunit="euro" is_assembled="no" option_of_assembly="yes">
                 1500.00
-                <offer_rate>35%</offer_rate>
+                <offer_rate>35</offer_rate>
             </start_value>
             <Final_value valunit="euro">
                 975.00
@@ -429,7 +428,7 @@ xsi:schemaLocation="urn:Test.Namespace b4.xsd">
             </product_characteristics>
             <start_value valunit="euro" can_reserved="yes" can_return="yes"> 
                 37.00 
-                <offer_rate>46%</offer_rate>
+                <offer_rate>46</offer_rate>
             </start_value>
             <Final_value valunit="euro">20.00</Final_value>
         </product>
@@ -530,7 +529,7 @@ xsi:schemaLocation="urn:Test.Namespace b4.xsd">
             </product_characteristics>
             <start_value valunit="euro" can_reserved="yes" is_assembled="yes" can_return="no"> 
                49.00
-               <offer_rate>40%</offer_rate>
+               <offer_rate>40</offer_rate>
             </start_value>
             <Final_value valunit="euro">29.40</Final_value>
         </product>
@@ -569,7 +568,7 @@ xsi:schemaLocation="urn:Test.Namespace b4.xsd">
             </product_characteristics>
             <start_value valunit="euro" can_reserved="no" is_assembled="no" option_of_assembly="yes"> 
                89.00
-               <offer_rate>10%</offer_rate>
+               <offer_rate>10</offer_rate>
             </start_value>
             <Final_value valunit="euro">
                 80.10

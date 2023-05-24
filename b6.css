@@ -35,7 +35,7 @@ stores_list {
   align-items: center;
   justify-content: space-around;
   position: fixed;
-  background-color: #ab092f;
+  background-color: var(--primary);
   left: 0;
   top: 0;
   flex-wrap: wrap;
@@ -113,7 +113,7 @@ Headquarters::before {
   font-weight: bold;
   font-size: var(--font-md);
   font-family: sans-serif;
-  color: #ab092f;
+  color: var(--primary);
   text-decoration: underline;
   margin-bottom: 2rem;
   margin-top: 5rem;
@@ -135,7 +135,7 @@ Headquarters::after {
   font-size: 24px;
   font-weight: bold;
   text-decoration: underline;
-  color: #ab092f;
+  color: var(--primary);
   font-family: sans-serif;
 }
 stores {
@@ -185,7 +185,7 @@ store_hours::before {
   font-weight: bold;
   width: 100%;
   font-size: 24px;
-  color: #ab092f;
+  color: var(--primary);
   text-decoration: underline;
   margin-top: 5rem;
   margin-bottom: 1rem;
@@ -215,7 +215,7 @@ Services::before {
   content: "Services";
   font-size: 24px;
   font-weight: bold;
-  color: #ab092f;
+  color: var(--primary);
   text-decoration: underline;
   text-align: center;
   margin-bottom: 1rem;
@@ -340,7 +340,7 @@ product_list::before {
   font-weight: bold;
   font-size: 24px;
   text-decoration: underline;
-  color: #ab092f;
+  color: var(--primary);
   text-align: center;
   margin-top: 5rem;
   margin-bottom: 1rem;
@@ -383,7 +383,7 @@ product {
 product::before {
   content: attr(product_id);
   font-weight: bold;
-  color: #ab092f;
+  color: var(--primary);
   margin-right: 1rem;
   font-size: 24px;
   /* content: attr(prod_class_id); */
@@ -391,14 +391,14 @@ product::before {
 product-identification::before {
   content: "Product Code: ";
   font-weight: bold;
-  color: #002d51;
+  color: var(--secondary);
 }
 product-identification::after {
   content: attr(product_code);
 }
 store_availability::before {
   content: "Store availability: ";
-  color: #002d51;
+  color: var(--secondary);
   font-weight: bold;
 }
 quantity::after {
@@ -422,7 +422,7 @@ store_availability {
 
 product_descr::before {
   content: "Product description: ";
-  color: #002d51;
+  color: var(--secondary);
   font-weight: bold;
 }
 product_characteristics {
@@ -431,12 +431,12 @@ product_characteristics {
 }
 manufacturer_country::before {
   content: "Manufacturer: ";
-  color: #002d51;
+  color: var(--secondary);
   font-weight: bold;
 }
 weight::before {
   content: "Weight: ";
-  color: #002d51;
+  color: var(--secondary);
   font-weight: bold;
 }
 
@@ -445,31 +445,31 @@ weight::after {
 }
 material::before {
   content: "Material: ";
-  color: #002d51;
+  color: var(--secondary);
   font-weight: bold;
 }
 
 included::before {
   content: "Included: ";
-  color: #002d51;
+  color: var(--secondary);
   font-weight: bold;
 }
 
 not_included::before {
   content: "Not included: ";
-  color: #002d51;
+  color: var(--secondary);
   font-weight: bold;
 }
 
 color::before {
   content: "Color: ";
-  color: #002d51;
+  color: var(--secondary);
   font-weight: bold;
 }
 
 Dimensions::before {
   content: "Dimensions: ";
-  color: #002d51;
+  color: var(--secondary);
   font-weight: bold;
 }
 
@@ -517,6 +517,40 @@ height::before {
   display: list-item;
   margin-left: 2rem;
 }
+certified::before {
+  content: "Certified: ";
+  font-weight: bold;
+  color: var(--secondary);
+}
+
+certified::after {
+  content: attr(certificate);
+}
+
+start_value::before {
+  content: "Start value: ";
+  font-weight: bold;
+  color: var(--secondary);
+}
+
+offer_rate::before {
+  content: "with offer rate ";
+}
+
+Final_value::before {
+  content: "Final value: ";
+  font-weight: bold;
+  color: var(--secondary);
+}
+
+num_doses::before {
+  content: "with available number of doses ";
+}
+
+ammount_doses::before {
+  content: "and amount for each dose is ";
+}
+
 @media screen and (max-width: 560px) {
   store_hours {
     display: grid;
