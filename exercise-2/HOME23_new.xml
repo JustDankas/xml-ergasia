@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?xml-model href="b5.dtd" type="application/xml-dtd"?>
+<?xml-stylesheet href="HOME23_new.css" type="text/css"?>
+<!-- <?xml-stylesheet href="present1.xsl" type="text/xsl"?> -->
 
-
-
-<Epipla_Diakosmisi_AE number_of_products="over of 2000" Year_opened="2004">
+<Epipla_Diakosmisi_AE number_of_products="over of 2000" Year_opened="2004" 
+xmlns="urn:Test.Namespace"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="urn:Test.Namespace HOME23_new.xsd">
     <name>ΗΟΜΕ23</name>
     <stores_list>
         <store strid="strid-1" name="Αθήνα (Κολωνάκι)" />  
@@ -218,18 +220,9 @@
             </product_characteristics>
             <start_value valunit="euro" can_return="no">
                     19.99
-                    <offer_rate>33%</offer_rate>
+                    <offer_rate>33</offer_rate>
                 </start_value>
                 <Final_value>13.50</Final_value>
-                <low_on_stock stores="strid-2" />
-                <image type="jpg">https://d.scdn.gr/images/sku_main_images/016099/16099106/fixedratio_20220510000341_dimcol_mpournouzi_3010_me_koukoula_siel_1330911904930128.jpeg</image>
-                <ratings>
-                    <rating>
-                        <username>Sebastian Eli Fors</username>
-                        <stars>3.5</stars>
-                        <comment>...</comment>
-                    </rating>
-                </ratings>
         </product>
 
         <product product_id="product_id-2" prod_class_id="K11 class_id-3">
@@ -271,18 +264,6 @@
                40.00
             </start_value>
             <Final_value>40.00</Final_value>
-            <low_on_stock stores="strid-1 strid-4 strid-8 strid-9" />
-            <image type="jpg">https://d.scdn.gr/images/sku_main_images/009765/9765006/fixedratio_20220427185234_grafeio_glasser_gyalino_120x60x75cm_em736.jpeg</image>
-            <ratings>
-            <rating>
-                <username>xX_Killer_Sniper_x</username>
-                <stars>9.5</stars>
-                <comment>
-                I've raged in all sorts of games, I've punched this desk more than
-                a hundred times, nothing breaks this piece of wood!
-                </comment>
-            </rating>
-            </ratings>
         </product>
 
         <product product_id="product_id-3" prod_class_id="K2 class_id-3 class_id-9 spclass_id-1">
@@ -317,7 +298,7 @@
             </product_characteristics>
             <start_value valunit="euro" can_reserved="yes" is_assembled="yes">
                 199.00
-                <offer_rate>20%</offer_rate>
+                <offer_rate>20</offer_rate>
             </start_value>
             <Final_value valunit="euro">159.20
             <accept_doses>
@@ -327,9 +308,6 @@
                 <interest_free />
             </accept_doses>
             </Final_value>
-            <low_on_stock stores="strid-4 strid-5 strid-6 strid-7" />
-            <image type="jpg">https://a.scdn.gr/images/sku_main_images/009725/9725106/fixedratio_20220427185226_grafeio_decon_xylino_90x50x75cm_eo3035.jpeg</image>
-            <ratings></ratings>
         </product>
 
         <product product_id="product_id-4" prod_class_id="K3 K14 class_id-6 spclass_id-1">
@@ -371,7 +349,7 @@
             </product_characteristics>
             <start_value valunit="euro" is_assembled="no" option_of_assembly="yes">
                 1500.00
-                <offer_rate>35%</offer_rate>
+                <offer_rate>35</offer_rate>
             </start_value>
             <Final_value valunit="euro">
                 975.00
@@ -382,15 +360,6 @@
                     <interest_free />
                 </accept_doses>
             </Final_value>
-            <low_on_stock stores="strid-3 strid-4 strid-6 strid-7 strid-8" />
-            <image type="webp">https://us.123rf.com/450wm/alexmilan/alexmilan2208/alexmilan220800084/189912534-very-dirty-and-old-gas-stove-and-frying-pan-on-a-kitchen.jpg?ver=6</image>
-            <ratings>
-                <rating>
-                    <username>X</username>
-                    <stars>7.77</stars>
-                    <comment>Du du du, besfdt kkitchjessm evhr</comment>
-                </rating>
-            </ratings>
         </product>
 
         <product product_id="product_id-5" prod_class_id="K9 K25 class_id-1 class_id-3 class_id-4 class_id-5 class_id-6 class_id-7">
@@ -432,24 +401,6 @@
                     <interest_free />
                 </accept_doses>
             </Final_value>
-            <image type="jpg">https://i.etsystatic.com/24138131/r/il/dcd91c/3784694083/il_fullxfull.3784694083_6oe3.jpg</image>
-            <ratings>
-                <rating>
-                    <username>curtain lover</username>
-                    <stars>8</stars>
-                    <comment>i love this curtain</comment>
-                </rating>
-                <rating>
-                    <username>curtain lover</username>
-                    <stars>9.5</stars>
-                    <comment>i srsly love this curtain!, i rebought it again</comment>
-                </rating>
-                <rating>
-                    <username>curtain lover</username>
-                    <stars>10</stars>
-                    <comment>bought it one more time to give it 10 stars</comment>
-                </rating>
-            </ratings>
         </product>
 
         <product product_id="product_id-6" prod_class_id="K9 K26 class_id-1 class_id-7 spclass_id-1">
@@ -477,12 +428,9 @@
             </product_characteristics>
             <start_value valunit="euro" can_reserved="yes" can_return="yes"> 
                 37.00 
-                <offer_rate>46%</offer_rate>
+                <offer_rate>46</offer_rate>
             </start_value>
             <Final_value valunit="euro">20.00</Final_value>
-            <low_on_stock stores="strid-8" />
-            <image type="jpg">https://i.redd.it/e7em2iwmehf61.jpg</image>
-            <ratings></ratings>
         </product>
 
         <product product_id="product_id-7" prod_class_id="K1 K17 class_id-5 class_id-6">
@@ -522,18 +470,6 @@
                     <interest_free />
                 </accept_doses>
             </Final_value>
-            <image type="jpg">https://s3.praktiker.gr/myPraktiker.Images/Products/105455/gallery/26686/PP_398229.jpg</image>
-            <ratings>
-                <rating>
-                    <username>Baby blue</username>
-                    <stars>5</stars>
-                </rating>
-                <rating>
-                    <username>gudman</username>
-                    <stars>9</stars>
-                    <comment>its all good man</comment>
-                </rating>
-            </ratings>
         </product>
 
          <product product_id="product_id-8" prod_class_id="K1 K17 class_id-5 class_id-6">
@@ -568,9 +504,6 @@
                 27.50
             </start_value>
             <Final_value valunit="euro">27.50</Final_value>
-            <image type="jpg">https://cdn3.jysk.com/getimage/wd2.large/60852</image>
-            <ratings>
-            </ratings>
         </product>
 
         <product product_id="product_id-9" prod_class_id="K18 K21 class_id-1 class_id-2 class_id-3 class_id-4 class_id-5 spclass_id-1">
@@ -596,18 +529,9 @@
             </product_characteristics>
             <start_value valunit="euro" can_reserved="yes" is_assembled="yes" can_return="no"> 
                49.00
-               <offer_rate>40%</offer_rate>
+               <offer_rate>40</offer_rate>
             </start_value>
             <Final_value valunit="euro">29.40</Final_value>
-            <low_on_stock stores="strid-1 strid-9" />
-            <image type="jpg">https://c.scdn.gr/images/sku_main_images/020784/20784482/fixedratio_20191101112926_liberta_frame_11_0254.jpeg</image>
-            <ratings>
-                <rating>
-                    <username>curtain lover</username>
-                    <stars>2</stars>
-                    <comment>i only like curtains</comment>
-                </rating>
-            </ratings>
         </product>
 
         <product product_id="product_id-10" prod_class_id="K2 K7 class_id-9 spclass_id-1">
@@ -644,7 +568,7 @@
             </product_characteristics>
             <start_value valunit="euro" can_reserved="no" is_assembled="no" option_of_assembly="yes"> 
                89.00
-               <offer_rate>10%</offer_rate>
+               <offer_rate>10</offer_rate>
             </start_value>
             <Final_value valunit="euro">
                 80.10
@@ -655,19 +579,6 @@
                     <interest_free />
                 </accept_doses>
             </Final_value>
-            <low_on_stock stores="strid-4" />
-            <image type="jpg">https://cdn1.jysk.com/getimage/wd2.large/60930</image>
-            <ratings></ratings>
         </product>
     </product_list>
-    <gift_cards>
-        <giftcard id="gc-1" value="30">30€</giftcard>
-        <giftcard id="gc-2" value="50">50€</giftcard>
-        <giftcard id="gc-3" value="100">100€</giftcard>
-        <giftcard id="gc-4" value="150">150€</giftcard>
-        <giftcard id="gc-5" value="200">200€</giftcard>
-        <giftcard id="gc-6" value="300">300€</giftcard>
-        <giftcard id="gc-7" value="400">400€</giftcard>
-        <giftcard id="gc-8" value="500">500€</giftcard>
-    </gift_cards>
 </Epipla_Diakosmisi_AE>

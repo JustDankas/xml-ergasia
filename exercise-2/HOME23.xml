@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?xml-stylesheet href="b6.css" type="text/css"?>
-<!-- <?xml-stylesheet href="present1.xsl" type="text/xsl"?> -->
+<?xml-model href="HOME23.dtd" type="application/xml-dtd"?>
 
-<Epipla_Diakosmisi_AE number_of_products="over of 2000" Year_opened="2004" 
-xmlns="urn:Test.Namespace"
-xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xsi:schemaLocation="urn:Test.Namespace b4.xsd">
+<Epipla_Diakosmisi_AE number_of_products="over of 2000" Year_opened="2004">
     <name>ΗΟΜΕ23</name>
     <stores_list>
         <store strid="strid-1" name="Αθήνα (Κολωνάκι)" />  
@@ -202,7 +198,8 @@ xsi:schemaLocation="urn:Test.Namespace b4.xsd">
 
     <product_list>
         <product product_id="product_id-1" prod_class_id="K21 K9 class_id-2 spclass_id-2">
-            <product-identification product_code="H28K4741L" product_name="Μπουρνούζι LERUM" />
+            <product_name>Μπουρνούζι LERUM</product_name>
+            <product_code>H28K4741L</product_code>
             <store_availability>
                 <quantity store_id="strid-3">10</quantity>
                 <quantity store_id="strid-2">2</quantity>
@@ -220,13 +217,14 @@ xsi:schemaLocation="urn:Test.Namespace b4.xsd">
             </product_characteristics>
             <start_value valunit="euro" can_return="no">
                     19.99
-                    <offer_rate>33</offer_rate>
+                    <offer_rate>33%</offer_rate>
                 </start_value>
                 <Final_value>13.50</Final_value>
         </product>
 
         <product product_id="product_id-2" prod_class_id="K11 class_id-3">
-            <product-identification product_code="K33J4755J" product_name="Γραφείο DERUP 40x100 λευκό" />
+            <product_name>Γραφείο DERUP 40x100 λευκό</product_name>
+            <product_code>K33J4755J</product_code>
             <store_availability>
                 <quantity store_id="strid-3">3</quantity>
                 <quantity store_id="strid-1">2</quantity>
@@ -267,7 +265,8 @@ xsi:schemaLocation="urn:Test.Namespace b4.xsd">
         </product>
 
         <product product_id="product_id-3" prod_class_id="K2 class_id-3 class_id-9 spclass_id-1">
-            <product-identification product_code="K4376RT9L" product_name="Βιβλιοθήκη Liberta Urban 105x140cm Φυσικό με Μαύρο Σκελετό" />
+            <product_name>Βιβλιοθήκη Liberta Urban 105x140cm Φυσικό με Μαύρο Σκελετό</product_name>
+            <product_code>K4376RT9L</product_code>
             <store_availability>
                 <quantity store_id="strid-3">5</quantity>
                 <quantity store_id="strid-1">3</quantity>
@@ -298,7 +297,7 @@ xsi:schemaLocation="urn:Test.Namespace b4.xsd">
             </product_characteristics>
             <start_value valunit="euro" can_reserved="yes" is_assembled="yes">
                 199.00
-                <offer_rate>20</offer_rate>
+                <offer_rate>20%</offer_rate>
             </start_value>
             <Final_value valunit="euro">159.20
             <accept_doses>
@@ -311,8 +310,8 @@ xsi:schemaLocation="urn:Test.Namespace b4.xsd">
         </product>
 
         <product product_id="product_id-4" prod_class_id="K3 K14 class_id-6 spclass_id-1">
-            <product-identification product_code="RP1LK6XD1" product_name="Έτοιμη Κουζίνα lemwood Randi για Εντιχοιζόμενες Συσκευές 300x60x217cm Σονόμα/Γκρι" />
-
+            <product_name>Έτοιμη Κουζίνα lemwood Randi για Εντιχοιζόμενες Συσκευές 300x60x217cm Σονόμα/Γκρι</product_name>
+            <product_code>RP1LK6XD1</product_code>
             <store_availability>
                 <quantity store_id="strid-3">2</quantity>
                 <quantity store_id="strid-4">2</quantity>
@@ -349,7 +348,7 @@ xsi:schemaLocation="urn:Test.Namespace b4.xsd">
             </product_characteristics>
             <start_value valunit="euro" is_assembled="no" option_of_assembly="yes">
                 1500.00
-                <offer_rate>35</offer_rate>
+                <offer_rate>35%</offer_rate>
             </start_value>
             <Final_value valunit="euro">
                 975.00
@@ -363,8 +362,8 @@ xsi:schemaLocation="urn:Test.Namespace b4.xsd">
         </product>
 
         <product product_id="product_id-5" prod_class_id="K9 K25 class_id-1 class_id-3 class_id-4 class_id-5 class_id-6 class_id-7">
-            <product-identification product_code="CURT6542W" product_name="Κουρτίνα Pierre Cardin Alcadara 140X270cm Γκρι" />
-
+            <product_name>Κουρτίνα Pierre Cardin Alcadara 140X270cm Γκρι</product_name>
+            <product_code>CURT6542W</product_code>
             <store_availability>
                 <quantity store_id="strid-3">16</quantity>
                 <quantity store_id="strid-2">12</quantity>
@@ -404,8 +403,8 @@ xsi:schemaLocation="urn:Test.Namespace b4.xsd">
         </product>
 
         <product product_id="product_id-6" prod_class_id="K9 K26 class_id-1 class_id-7 spclass_id-1">
-            <product-identification product_code="COVR154KY" product_name="Κουβέρτα Πικέ Waffle 240X160cm Μπεζ" />
-
+            <product_name>Κουβέρτα Πικέ Waffle 240X160cm Μπεζ</product_name>
+            <product_code>COVR154KY</product_code>
             <store_availability>
                  <quantity store_id="strid-3">14</quantity>
                 <quantity store_id="strid-8">1</quantity>
@@ -428,14 +427,14 @@ xsi:schemaLocation="urn:Test.Namespace b4.xsd">
             </product_characteristics>
             <start_value valunit="euro" can_reserved="yes" can_return="yes"> 
                 37.00 
-                <offer_rate>46</offer_rate>
+                <offer_rate>46%</offer_rate>
             </start_value>
             <Final_value valunit="euro">20.00</Final_value>
         </product>
 
         <product product_id="product_id-7" prod_class_id="K1 K17 class_id-5 class_id-6">
-            <product-identification product_code="CHAR083NH" product_name="Καρέκλα Τραπεζαρίας Life Καφέ" />
-
+            <product_name>Καρέκλα Τραπεζαρίας Life Καφέ</product_name>
+            <product_code>CHAR083NH</product_code>
             <store_availability>
                  <quantity store_id="strid-3">12</quantity>
                 <quantity store_id="strid-2">15</quantity>
@@ -473,8 +472,8 @@ xsi:schemaLocation="urn:Test.Namespace b4.xsd">
         </product>
 
          <product product_id="product_id-8" prod_class_id="K1 K17 class_id-5 class_id-6">
-            <product-identification product_code="CHAR767DF" product_name="Καρέκλα τραπεζαρίας TOREBY Oval μαύρη" />
-
+            <product_name>Καρέκλα τραπεζαρίας TOREBY Oval μαύρη</product_name>
+            <product_code>CHAR767DF</product_code>
             <store_availability>
                  <quantity store_id="strid-1">4</quantity>
                 <quantity store_id="strid-2">6</quantity>
@@ -507,9 +506,8 @@ xsi:schemaLocation="urn:Test.Namespace b4.xsd">
         </product>
 
         <product product_id="product_id-9" prod_class_id="K18 K21 class_id-1 class_id-2 class_id-3 class_id-4 class_id-5 spclass_id-1">
-
-            <product-identification product_code="FD104GBL0" product_name="Καθρέπτης Τοίχου Frame Μαύρος" />
-
+            <product_name>Καθρέπτης Τοίχου Frame Μαύρος</product_name>
+            <product_code>FD104GBL0</product_code>
             <store_availability>
                  <quantity store_id="strid-1">2</quantity>
                 <quantity store_id="strid-9">1</quantity>
@@ -529,14 +527,14 @@ xsi:schemaLocation="urn:Test.Namespace b4.xsd">
             </product_characteristics>
             <start_value valunit="euro" can_reserved="yes" is_assembled="yes" can_return="no"> 
                49.00
-               <offer_rate>40</offer_rate>
+               <offer_rate>40%</offer_rate>
             </start_value>
             <Final_value valunit="euro">29.40</Final_value>
         </product>
 
         <product product_id="product_id-10" prod_class_id="K2 K7 class_id-9 spclass_id-1">
-            <product-identification product_code="c7MFJ90511" product_name="Παπουτσοθήκη BAGENKOP δρυς" />
-
+            <product_name>Παπουτσοθήκη BAGENKOP δρυς</product_name>
+            <product_code>7MFJ90511</product_code>
             <store_availability>
                  <quantity store_id="strid-3">5</quantity>
                 <quantity store_id="strid-1">8</quantity>
@@ -568,7 +566,7 @@ xsi:schemaLocation="urn:Test.Namespace b4.xsd">
             </product_characteristics>
             <start_value valunit="euro" can_reserved="no" is_assembled="no" option_of_assembly="yes"> 
                89.00
-               <offer_rate>10</offer_rate>
+               <offer_rate>10%</offer_rate>
             </start_value>
             <Final_value valunit="euro">
                 80.10
