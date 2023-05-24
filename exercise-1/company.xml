@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE customerList SYSTEM "./Impostor.dtd">
+<!DOCTYPE customerList SYSTEM "./company.dtd">
 
 <customerList>
   <company CompCodeNo="C001">
