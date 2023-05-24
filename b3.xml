@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- <?xml-model href="b3.dtd" type="application/xml-dtd"?> -->
-<?xml-stylesheet href="b6.css" type="text/css"?>
-
+<!-- <?xml-stylesheet href="b6.css" type="text/css"?> -->
+<?xml-stylesheet type="text/xsl" href="b7.xsl"?>
 
 <Epipla_Diakosmisi_AE number_of_products="over of 2000" Year_opened="2004" 
 xmlns="urn:Test.Namespace"
