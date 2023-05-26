@@ -222,7 +222,10 @@
                 </start_value>
                 <Final_value>13.50</Final_value>
                 <low_on_stock stores="strid-2" />
+                <!-- Εικόνα και ο τύπος αυτής -->
                 <image type="jpg">https://d.scdn.gr/images/sku_main_images/016099/16099106/fixedratio_20220510000341_dimcol_mpournouzi_3010_me_koukoula_siel_1330911904930128.jpeg</image>
+
+                <!-- Ψήφος -->
                 <ratings>
                     <rating>
                         <username>Sebastian Eli Fors</username>
@@ -272,7 +275,10 @@
             </start_value>
             <Final_value>40.00</Final_value>
             <low_on_stock stores="strid-1 strid-4 strid-8 strid-9" />
+            <!-- Εικόνα και ο τύπος αυτής -->
             <image type="jpg">https://d.scdn.gr/images/sku_main_images/009765/9765006/fixedratio_20220427185234_grafeio_glasser_gyalino_120x60x75cm_em736.jpeg</image>
+
+            <!-- Ψήφος -->
             <ratings>
             <rating>
                 <username>xX_Killer_Sniper_x</username>
@@ -328,7 +334,10 @@
             </accept_doses>
             </Final_value>
             <low_on_stock stores="strid-4 strid-5 strid-6 strid-7" />
+            <!-- Ομοίως και στα υπόλοιπα προϊόντα για την εικόνα -->
             <image type="jpg">https://a.scdn.gr/images/sku_main_images/009725/9725106/fixedratio_20220427185226_grafeio_decon_xylino_90x50x75cm_eo3035.jpeg</image>
+
+            <!-- Ψήφος -->
             <ratings></ratings>
         </product>
 
@@ -384,6 +393,8 @@
             </Final_value>
             <low_on_stock stores="strid-3 strid-4 strid-6 strid-7 strid-8" />
             <image type="webp">https://us.123rf.com/450wm/alexmilan/alexmilan2208/alexmilan220800084/189912534-very-dirty-and-old-gas-stove-and-frying-pan-on-a-kitchen.jpg?ver=6</image>
+
+            <!-- Ψήφος ομοίως και για τα υπόλοιπα-->
             <ratings>
                 <rating>
                     <username>X</username>
@@ -660,6 +671,8 @@
             <ratings></ratings>
         </product>
     </product_list>
+
+    <!-- Πώληση δωροκαρτών -->
     <gift_cards>
         <giftcard id="gc-1" value="30">30€</giftcard>
         <giftcard id="gc-2" value="50">50€</giftcard>
